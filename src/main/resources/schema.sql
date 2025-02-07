@@ -8,3 +8,8 @@ create table if not exists order_items(
     quantity int not null,
     orders int references orders(id)
 );
+
+create table if not exists deliveries(
+    id serial primary key not null,
+    order_id int not null
+);
